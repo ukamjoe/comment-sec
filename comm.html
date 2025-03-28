@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Comment Section</title>
+    <link rel="stylesheet" href="comm.css">
+</head>
+<body>
+    <div class="main-container">
+        <section class="comment">
+            <!-- Comment 1 -->
+            <div class="susident">
+                <div class="amy">
+                    <div class="crease">
+                        <button class="increase" aria-label="Increase vote count"><ion-icon name="add"></ion-icon></button>
+                        <div class="number"><em>0</em></div>
+                        <button class="decrease" aria-label="Decrease vote count"><ion-icon name="remove"></ion-icon></button>
+                    </div>
+                    <div class="cotent">
+                        <img src="images/avatars/image-amyrobson.png" alt="Amy Robson's avatar">
+                        <h4>amyrobson</h4>
+                        <p>1 month ago</p>
+                        <button class="reply" aria-label="Reply to comment">
+                            <ion-icon name="arrow-undo"></ion-icon>
+                            <p>Reply</p>
+                        </button>
+                    </div>
+                    <p class="comet">
+                        Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and responsiveness at various breakpoints.
+                    </p>
+                </div>
+                <div class="responce" style="display: none;">
+                    <img src="images/avatars/image-juliusomo.png" alt="Your avatar">
+                    <textarea rows="4" cols="50" placeholder="Add a reply..."></textarea>
+                    <button class="reps">Reply</button>
+                </div>
+            </div>
+
+            <!-- Comment 2 -->
+            <div class="susident">
+                <div class="amy">
+                    <div class="crease">
+                        <button class="increase" aria-label="Increase vote count"><ion-icon name="add"></ion-icon></button>
+                        <div class="number"><em>0</em></div>
+                        <button class="decrease" aria-label="Decrease vote count"><ion-icon name="remove"></ion-icon></button>
+                    </div>
+                    <div class="cotent">
+                        <img src="images/avatars/image-maxblagun.png" alt="Max Blagun's avatar">
+                        <h4>maxblagun</h4>
+                        <p>2 weeks ago</p>
+                        <button class="reply" aria-label="Reply to comment">
+                            <ion-icon name="arrow-undo"></ion-icon>
+                            <p>Reply</p>
+                        </button>
+                    </div>
+                    <p class="comet">
+                        Woah, your project looks awesome! How long have you been coding for? I'm still new but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!
+                    </p>
+                </div>
+                <div class="responce" style="display: none;">
+                    <img src="images/avatars/image-juliusomo.png" alt="Your avatar">
+                    <textarea rows="4" cols="50" placeholder="Add a reply..."></textarea>
+                    <button class="reps">Reply</button>
+                </div>
+            </div>
+
+            <!-- Sub-comment -->
+            <div class="subsident">
+                <div class="amy">
+                    <div class="crease">
+                        <button class="increase" aria-label="Increase vote count"><ion-icon name="add"></ion-icon></button>
+                        <div class="number"><em>0</em></div>
+                        <button class="decrease" aria-label="Decrease vote count"><ion-icon name="remove"></ion-icon></button>
+                    </div>
+                    <div class="cotent">
+                        <img src="images/avatars/image-ramsesmiron.png" alt="Ramses Miron's avatar">
+                        <h4>ramsesmiron</h4>
+                        <p>1 week ago</p>
+                        <button class="reply" aria-label="Reply to comment">
+                            <ion-icon name="arrow-undo"></ion-icon>
+                            <p>Reply</p>
+                        </button>
+                    </div>
+                    <p class="comet">
+                        <em>@maxblagun</em> If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JavaScript before considering React. It's very tempting to jump ahead, but lay a solid foundation first.
+                    </p>
+                </div>
+                <div class="responce" style="display: none;">
+                    <img src="images/avatars/image-juliusomo.png" alt="Your avatar">
+                    <textarea rows="4" cols="50" placeholder="Add a reply..."></textarea>
+                    <button class="reps">Reply</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="new-comment">
+            <img src="images/avatars/image-juliusomo.png" alt="Your avatar">
+            <textarea rows="4" cols="50" placeholder="Add a comment..."></textarea>
+            <button id="send">Send</button>
+        </div>
+    </div>
+
+    <script src="comm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

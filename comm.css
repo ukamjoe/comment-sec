@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(240, 9%, 91%);
+    padding: 2rem 0;
+}
+
+.comment {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.susident, .subsident {
+    margin-bottom: 1rem;
+}
+
+.subsident {
+    margin-left: 2rem;
+    padding-left: 2rem;
+    border-left: 2px solid hsl(239, 57%, 85%);
+}
+
+.amy {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    position: relative;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crease {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsla(239, 57%, 85%, 0.3);
+    border-radius: 10px;
+    padding: 0.5rem;
+    position: absolute;
+    left: 1rem;
+}
+
+.increase, .decrease {
+    background: transparent;
+    color: hsl(238, 40%, 52%);
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.increase:hover, .decrease:hover {
+    color: hsl(238, 40%, 65%);
+}
+
+.number {
+    margin: 0.5rem 0;
+    font-weight: 500;
+    color: hsl(238, 40%, 52%);
+}
+
+.number em {
+    font-style: normal;
+}
+
+.cotent {
+    display: flex;
+    align-items: center;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+}
+
+.cotent img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.cotent h4 {
+    margin: 0 1rem;
+    color: hsl(212, 24%, 26%);
+}
+
+.cotent p {
+    color: hsl(211, 10%, 45%);
+}
+
+.reply {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: hsl(238, 40%, 52%);
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.reply:hover {
+    color: hsl(239, 57%, 85%);
+}
+
+.reply ion-icon {
+    font-size: 1.2rem;
+}
+
+.comet {
+    margin-left: 4rem;
+    color: hsl(211, 10%, 45%);
+    line-height: 1.5;
+}
+
+.responce {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.responce img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.responce textarea {
+    flex-grow: 1;
+    border: 1px solid hsl(223, 19%, 93%);
+    border-radius: 8px;
+    padding: 0.75rem;
+    resize: none;
+    min-height: 96px;
+}
+
+.reps {
+    background-color: hsl(238, 40%, 52%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.reps:hover {
+    background-color: hsl(239, 57%, 85%);
+}
+
+.new-comment {
+    max-width: 800px;
+    margin: 1rem auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.new-comment img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.new-comment textarea {
+    flex-grow: 1;
+    border: 1px solid hsl(223, 19%, 93%);
+    border-radius: 8px;
+    padding: 0.75rem;
+    resize: none;
+    min-height: 96px;
+}
+
+#send {
+    background-color: hsl(238, 40%, 52%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#send:hover {
+    background-color: hsl(239, 57%, 85%);
+}
+
+/* Delete and Edit buttons */
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.delete, .edit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.delete {
+    color: hsl(358, 79%, 66%);
+}
+
+.edit {
+    color: hsl(238, 40%, 52%);
+}
+
+.delete:hover, .edit:hover {
+    opacity: 0.7;
+}
+
+.delete ion-icon, .edit ion-icon {
+    font-size: 1.2rem;
+}

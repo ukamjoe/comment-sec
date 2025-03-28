@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+    border: none;
+}
+
+.main-container{
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+    background-color: hsl(240, 9%, 91%);
+}
+
+.comment{
+    width: 800px;
+    height: max-content;
+    position: relative;
+    overflow: auto;
+    margin-left: 250px;
+    margin-top: 50px;
+}
+
+.amy{
+    width: 620px;
+    height: 140px;
+    margin-top: 30px;
+    margin-left: 100px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.amys{
+    width: 620px;
+    height: 140px;
+    margin-top: 10px;
+    margin-left: 100px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.crease{
+    width: 25px;
+    height: 70px;
+    margin-top: 30px;
+    margin-left: 20px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: hsla(239, 57%, 85%, 0.3);
+    justify-content: space-between;
+}
+
+.increase{
+    width: 100%;
+    color: blue;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.number{
+    width: 15px;
+    justify-content: center;
+    margin-top: 7px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.number em{
+    margin-left: 3px;
+    font-style: normal;
+}
+
+.decrease{
+    width: 100%;
+    margin-top: 10px;
+    color:blue;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.cotent{
+    width: max-content;
+    margin-left: 60px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.cotent img{
+    width: 25px;
+    height: 25px;
+}
+
+.cotent h4{
+    font-weight: bold;
+    margin-top: 5px ;
+    margin-left: 10px;
+}
+
+.cotent p{
+    width: max-content;
+    margin-top: 5px ;
+    margin-left: 10px;
+}
+
+.reply{
+    width: max-content;
+    font-size: 18px;
+    background-color: transparent;
+    margin-left: 210px;
+    color: darkblue;
+    display: flex;
+    cursor: pointer;
+}
+
+.reply:hover{
+    color:skyblue;
+}
+
+.reply p{
+    font-size: 17px;
+    margin-top: 1px;
+}
+
+.comet{
+    width: 530px;
+    height: 70px;
+    margin-left: 60px;
+    margin-top: 10px;
+    text-align: justify;
+    line-height: 1.2;
+}
+
+.responce{
+    width: 620px;
+    height: 100px;
+    margin-left: 100px;
+    margin-top: 10px; 
+}
+
+.commen{
+    width: 620px;
+    height: 100px;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.commen img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.commen textarea{
+    width: 320px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 80px;
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+.rep{
+    width: 80px;
+    height: 40px;
+    background-color: rgb(78, 78, 214);
+    border-radius: 10px;
+    margin-left: 430px;
+    position: absolute;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 2px 0px grey;
+}
+
+.rep:hover{
+    background-color: lightblue;
+}
+
+/* Start of new code with similar name with 's' in front*/
+.sub-comment{
+    width: max-content;
+    height: 280px;
+    max-height: max-content;
+    margin-left: 150px;
+    position: relative;
+    border-left: 2px solid grey;
+    padding: 20px;
+    padding-top: 0px;
+    margin-top: 20px;
+}
+
+.ama{
+    width: 520px;
+    height: 140px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.ami{
+    width: 520px;
+    height: 140px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.creases{
+    width: 25px;
+    height: 70px;
+    margin-top: 30px;
+    margin-left: 10px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: hsla(239, 57%, 85%, 0.3);
+    justify-content: space-between;
+}
+
+.cotents{
+    width: max-content;
+    margin-left: 50px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.cotents img{
+    width: 25px;
+    height: 25px;
+}
+
+.cotents h4{
+    font-weight: bold;
+    margin-top: 5px ;
+    margin-left: 10px;
+}
+
+.cotents p{
+    width: max-content;
+    margin-top: 5px ;
+    margin-left: 10px;
+}
+
+.replys{
+    width: max-content;
+    font-size: 18px;
+    background-color: transparent;
+    margin-left: 150px;
+    color: darkblue;
+    display: flex;
+    cursor: pointer;
+}
+
+.replys:hover{
+    color:skyblue;
+}
+
+.replys p{
+    font-size: 17px;
+    margin-top: 1px;
+}
+
+.buttons{
+    width:max-content;
+    height: 25px;
+    display: flex;
+    margin-left: 130px;
+}
+
+.delete{
+    width: max-content;
+    height: 25px;
+    display: flex;
+    color: red;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.delete:hover{
+    opacity: 0.5;
+}
+
+.delete ion-icon{
+    margin-right:5px ;
+    color: red;
+    margin-top: 3px;
+}
+
+.dele{
+    margin-top: 3px;
+}
+
+.edit{
+    width: max-content;
+    height: 25px;
+    display: flex;
+    margin-left: 10px;
+    color:blue;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.edit ion-icon{
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+.edit:hover{
+    opacity: 0.5;
+}
+
+.dit{
+    margin-top: 3px;
+}
+
+#commit{
+    width: 530px;
+    height: 70px;
+    margin-left: 50px;
+    margin-top: 10px;
+    text-align: justify;
+    line-height: 1.2;
+}
+
+#commit em{
+    color: blue;
+}
+
+.comets{
+    width: 530px;
+    height: 70px;
+    margin-left: 50px;
+    margin-top: 10px;
+    text-align: justify;
+    line-height: 1.2;
+}
+
+.comets em{
+    color: blue;
+}
+
+#response{
+    width: 520px;
+    height: 100px;
+    margin-top: 10px; 
+}
+
+.commend{
+    width: 520px;
+    height: 100px;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.commend img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.commend textarea{
+    width: 320px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 80px;
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+.reps{
+    width: 80px;
+    height: 40px;
+    background-color: rgb(78, 78, 214);
+    border-radius: 10px;
+    margin-left: 430px;
+    position: absolute;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 2px 0px grey;
+}
+
+.reps:hover{
+    background-color: lightblue;
+}
+
+/*Textarea for posting*/
+.comments{
+    width: 620px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 350px;
+    margin-bottom: 40px;
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.comments img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.comments textarea{
+    width: 320px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+#send{
+    width: 80px;
+    height: 40px;
+    background-color: rgb(78, 78, 214);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 2px 0px grey;
+}
+
+#send:hover{
+    background-color: lightblue;
+}
+
+/* Styling for inner HTML*/

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive comment section</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main-container">
+        <section class="comment">
+            <div class="susident">
+                <div class="amy">
+                    <div class="crease">
+                        <button class="increase"><ion-icon name="add"></ion-icon></button>
+                        <div class="number"><em>0</em></div>
+                        <button class="decrease"><ion-icon name="remove"></ion-icon></button>
+                    </div>
+                    <div class="cotent">
+                        <img src="images/avatars/image-amyrobson.png" alt="">
+                        <h4>amyrobson</h4>
+                        <p>1 month ago</p>
+                        <button class="reply" id="reply">
+                            <ion-icon name="arrow-undo"></ion-icon>
+                            <p>Reply</p>
+                        </button>
+                    </div>
+    
+                    <p class="comet" id="comet">
+                        Impressive! Though it seems the drag feauture could be improved. But overal it <br>
+                        looks incredible. You've nailed the design and the responsiveness at various <br>
+                        breakpoints works really well.
+                    </p>
+                </div>
+
+                <div class="responce">
+                    <div class="commen">
+                        <img src="images/avatars/image-juliusomo.png" alt="">
+                        <textarea rows="4" cols="50" placeholder="Start typing..."></textarea>
+                        <button class="rep" id="rep">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsident">
+                <div class="amys">
+                    <div class="crease">
+                        <button class="increase"><ion-icon name="add"></ion-icon></button>
+                        <div class="number"><em>0</em></div>
+                        <button class="decrease"><ion-icon name="remove"></ion-icon></button>
+                    </div>
+                    <div class="cotent">
+                        <img src="images/avatars/image-maxblagun.png" alt="">
+                        <h4>maxblagun</h4>
+                        <p>2 weeks ago</p>
+                        <button class="reply" id="reply">
+                            <ion-icon name="arrow-undo"></ion-icon>
+                            <p>Reply</p>
+                        </button>
+                    </div>
+    
+                    <p class="comet" id="comet">
+                      Woah, your project looks awesome! How long have you been coding for? I'm still <br>
+                      new, but think i want too div into react as well soon. Perhaps you can give me an <br>
+                      insight on where i can learn React? Thanks! 
+                    </p>
+                </div>
+
+                <div class="responce">
+                    <div class="commen">
+                        <img src="images/avatars/image-juliusomo.png" alt="">
+                        <textarea rows="4" cols="50" placeholder="Start typing..."></textarea>
+                        <button class="rep" id="rep">Reply</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="sub-comment">  
+                <div class="bondary">
+                    <div class="ami">
+                        <div class="creases">
+                            <button class="increase"><ion-icon name="add"></ion-icon></button>
+                            <div class="number"><em>0</em></div>
+                            <button class="decrease"><ion-icon name="remove"></ion-icon></button>
+                        </div>
+                        <div class="cotents">
+                            <img src="images/avatars/image-ramsesmiron.png" alt="">
+                            <h4>ramsesmiron</h4>
+                            <p>1 week ago</p>
+                            <button class="replys" id="replys">
+                                <ion-icon name="arrow-undo"></ion-icon>
+                                <p>Reply</p>
+                            </button>
+                        </div>
+        
+                        <p class="comets" id="comets">
+                            <em>@maxblagun</em> If you're still new, I'd recommend focusing in the <br>
+                            fundamentals of HTML, CSS, and JS before considering React. It's very <br>
+                            tempting to jump ahead but lay a solid foundation first.
+                        </p>
+                    </div>
+
+                    <div id="response">
+                        <div class="commend">
+                            <img src="images/avatars/image-juliusomo.png" alt="">
+                            <textarea rows="4" cols="50" placeholder="Start typing..."></textarea>
+                            <button class="reps" id="reps">Reply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ama">
+                    <div class="creases">
+                        <button class="increase"><ion-icon name="add"></ion-icon></button>
+                        <div class="number"><em>0</em></div>
+                        <button class="decrease"><ion-icon name="remove"></ion-icon></button>
+                    </div>
+                    <div class="cotents">
+                        <img src="images/avatars/image-juliusomo.png" alt="">
+                        <h4>juliusomo</h4>
+                        <p>2 days ago</p>
+                        <div class="buttons">
+                            <button class="delete" id="delete">
+                                <ion-icon name="trash-outline"></ion-icon>
+                                <div class="dele">Delete</div>
+                            </button>
+
+                            <button class="edit" id="edit">
+                                <ion-icon name="pencil-outline"></ion-icon>
+                                <div class="dit">Edit</div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p id="commit">
+                        <em>@ramsesmiron</em> I couldn't agree more with this. Everything moves so <br>
+                        fast and it always seems like everyone knows the newest library/ <br>
+                        framework. But the fundamentals are what stay constant
+                    </p>
+                </div>
+            </section>
+        </section>
+        
+        <div class="comments">
+            <img src="images/avatars/image-juliusomo.png" alt="">
+            <textarea id="commenting" rows="4" cols="50" placeholder="Start typing..."></textarea>
+            <button id="send">Send</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
