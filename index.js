@@ -1,84 +1,142 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const increaseButtons = document.querySelectorAll(".increase");
-    const decreaseButtons = document.querySelectorAll(".decrease");
-    const replyButtons = document.querySelectorAll(".reply, .replys");
-    const sendButton = document.querySelector("#send");
-    const textArea = document.querySelector("textarea");
+    const sendButton = document.getElementById("send");
+    const mainTextArea = document.getElementById("commenting");
+    const commentSection = document.querySelector(".comment");
 
-    // Utility function to update vote count
-    function updateCount(button, operation) {
-        try {
-            const numberElement = button.closest(".crease, .creases").querySelector(".number em");
-            let currentValue = parseInt(numberElement.textContent);
-            if (operation === "increase") {
-                numberElement.textContent = currentValue + 1;
-            } else if (operation === "decrease" && currentValue > 0) {
-                numberElement.textContent = currentValue - 1;
-            }
-        } catch (error) {
-            console.error("Error updating count:", error);
+    // Initialize all interactive elements
+    initializeVoteButtons();
+    initializeReplyButtons();
+    initializeEditDeleteButtons();
+
+    // Handle main comment submission
+    sendButton.addEventListener("click", () => {
+        const commentText = mainTextArea.value.trim();
+        if (!commentText) {
+            alert("Please write something before sending.");
+            return;
         }
+
+        const newComment = createCommentElement(commentText);
+        commentSection.appendChild(newComment);
+        mainTextArea.value = "";
+    });
+
+    function createCommentElement(text, isReply = false) {
+        const div = document.createElement("div");
+        div.className = isReply ? "subsident" : "susident";
+
+        div.innerHTML = `
+            <div class="amy">
+                <div class="crease">
+                    <button class="increase"><ion-icon name="add"></ion-icon></button>
+                    <div class="number"><em>0</em></div>
+                    <button class="decrease"><ion-icon name="remove"></ion-icon></button>
+                </div>
+                <div class="cotent">
+                    <img src="images/avatars/image-juliusomo.png" alt="Your avatar">
+                    <h4>juliusomo</h4>
+                    <p>Just now</p>
+                    <div class="buttons">
+                        <button class="delete"><ion-icon name="trash-outline"></ion-icon><span>Delete</span></button>
+                        <button class="edit"><ion-icon name="pencil-outline"></ion-icon><span>Edit</span></button>
+                        <button class="reply"><ion-icon name="arrow-undo"></ion-icon><span>Reply</span></button>
+                    </div>
+                </div>
+                <p class="comet">${text}</p>
+            </div>
+            <div class="responce" style="display: none;">
+                <textarea rows="4" cols="50" placeholder="Add a reply..."></textarea>
+                <button class="reps">Reply</button>
+            </div>
+        `;
+
+        initializeVoteButtons(div);
+        initializeReplyButtons(div);
+        initializeEditDeleteButtons(div);
+
+        return div;
     }
 
-    // Handle vote increase and decrease
-    increaseButtons.forEach(button => {
-        button.addEventListener("click", () => updateCount(button, "increase"));
-    });
+    function initializeVoteButtons(container = document) {
+        container.querySelectorAll(".increase, .decrease").forEach(button => {
+            button.addEventListener("click", () => {
+                const numberElement = button.closest(".crease").querySelector(".number em");
+                let count = parseInt(numberElement.textContent);
 
-    decreaseButtons.forEach(button => {
-        button.addEventListener("click", () => updateCount(button, "decrease"));
-    });
-
-    // Initially hide all divs with class "responce" and id "response"
-    const responseDivs = document.querySelectorAll(".responce, #response");
-    responseDivs.forEach(field => {
-        field.style.display = "none"; // Hide both on page load
-    });
-
-    // Handle reply button clicks (toggle for class "responce" and id "response")
-    replyButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const parentContainer = button.closest(".susident, .subsident, .bondary, .sub-comment");
-            if (parentContainer) {
-                const responseDiv = parentContainer.querySelector(".responce, #response");
-                if (responseDiv) {
-                    responseDiv.style.display = responseDiv.style.display === "none" ? "block" : "none"; // Toggle visibility
+                if (button.classList.contains("increase")) {
+                    count++;
+                } else if (count > 0) {
+                    count--;
                 }
-            }
-        });
-    });
 
-    // Handle sending new comments
-    sendButton.addEventListener("click", () => {
-        const commentText = textArea.value.trim();
-        if (commentText !== "") {
-            const commentsContainer = document.querySelector(".main-container .comment");
-            const newComment = document.createElement("div");
-            newComment.classList.add("susident");
-            newComment.innerHTML = `
-                <div class="amy">
-                    <div class="crease">
-                        <button class="increase"><ion-icon name="add"></ion-icon></button>
-                        <div class="number"><em>0</em></div>
-                        <button class="decrease"><ion-icon name="remove"></ion-icon></button>
-                    </div>
-                    <div class="cotent">
-                        <img src="images/avatars/image-juliusomo.png" alt="">
-                        <h4>juliusomo</h4>
-                        <p>Just now</p>
-                        <button class="reply">
-                            <ion-icon name="arrow-undo"></ion-icon>
-                            <p>Reply</p>
-                        </button>
-                    </div>
-                    <p class="comet">${commentText}</p>
-                </div>
-            `;
-            commentsContainer.appendChild(newComment);
-            textArea.value = "";
-            textArea.placeholder = "Start typing...";
-        } else {
-            alert("Please enter a comment before sending.");
-        }
-    });
+                numberElement.textContent = count;
+            });
+        });
+    }
+
+    function initializeReplyButtons(container = document) {
+        container.querySelectorAll(".reply, .replys").forEach(button => {
+            button.addEventListener("click", () => {
+                const responseDiv = button.closest(".susident, .subsident, .bondary").querySelector(".responce, #response");
+                responseDiv.style.display = responseDiv.style.display === "none" ? "block" : "none";
+            });
+        });
+
+        container.querySelectorAll(".reps, .rep").forEach(button => {
+            button.addEventListener("click", () => {
+                const replyText = button.previousElementSibling.value.trim();
+                if (!replyText) {
+                    alert("Please write something before replying.");
+                    return;
+                }
+
+                const newReply = createCommentElement(replyText, true);
+                button.closest(".susident, .subsident, .bondary").after(newReply);
+                button.previousElementSibling.value = "";
+                button.closest(".responce, #response").style.display = "none";
+            });
+        });
+    }
+
+    function initializeEditDeleteButtons(container = document) {
+        container.querySelectorAll(".delete").forEach(button => {
+            button.addEventListener("click", () => {
+                if (confirm("Are you sure you want to delete this comment?")) {
+                    button.closest(".susident, .subsident, .bondary").remove();
+                }
+            });
+        });
+
+        container.querySelectorAll(".edit").forEach(button => {
+            button.addEventListener("click", () => {
+                const commentElement = button.closest(".amy, .ami").querySelector(".comet, .comets");
+                const currentText = commentElement.textContent.trim();
+
+                const textarea = document.createElement("textarea");
+                textarea.value = currentText;
+                textarea.rows = 4;
+                textarea.style.width = "100%";
+                textarea.style.marginTop = "1rem";
+
+                const updateButton = document.createElement("button");
+                updateButton.textContent = "Update";
+                updateButton.className = "reps";
+                updateButton.style.marginTop = "1rem";
+
+                commentElement.replaceWith(textarea);
+                textarea.after(updateButton);
+
+                updateButton.addEventListener("click", () => {
+                    const newText = textarea.value.trim();
+                    if (newText) {
+                        const newComment = document.createElement("p");
+                        newComment.className = "comet";
+                        newComment.textContent = newText;
+                        textarea.replaceWith(newComment);
+                        updateButton.remove();
+                    }
+                });
+            });
+        });
+    }
 });
